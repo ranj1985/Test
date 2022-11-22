@@ -1,0 +1,101 @@
+package Test;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ProjectTest {
+
+	public static void main(String[] args) throws InterruptedException {
+	
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\aryal\\Desktop\\Selenium driver\\chromedriver_win32\\chromedriver.exe");
+		
+				WebDriver driver = new ChromeDriver();
+				
+				// create account
+//				driver.get("https://qatest.commentsoldrt.com/webstore-register?destination=/account");
+//				driver.findElement(By.id("customer-first-name")).sendKeys("Ranjana");
+//				driver.findElement(By.id("customer-last-name")).sendKeys("Rupakheti");
+//				driver.findElement(By.id("customer-email")).sendKeys("ranrupa16@gmail.com");
+//				driver.findElement(By.id("customer-password")).sendKeys("S1anvit16#");
+//				driver.findElement(By.cssSelector("#login-section > form > button")).click();
+
+		
+				// Login 
+				driver.get("https://qatest.commentsoldrt.com/webstore-login?destination=/account");
+				driver.manage().window().maximize();
+				driver.findElement(By.id("email")).sendKeys("ranrupa16@gmail.com");
+				driver.findElement(By.id("password")).sendKeys("S1anvit16#");
+				driver.findElement(By.cssSelector("#login-section > form > button.ws-v2-button-primary.mt-1r")).click();
+				
+//				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+//				driver.findElement(By.linkText("Shop")).click();
+//				Thread.sleep(500);
+//				
+				//driver.findElement(By.cssSelector("#email-modal")).sendKeys("ranrupa16@gmail.com");	
+//				driver.findElement(By.xpath("//button[contains(@aria-label, 'close')]")).click();
+				
+				// add to cart
+//				driver.findElement(By.linkText("New Arrivals")).click();
+//				driver.findElement(By.linkText("Velvet Duvet Cover")).click();
+//				driver.findElement(By.xpath("//*[@id=\"root\"]/div/main/div[1]/div[2]/div/div/div[5]/div/div/div/div[3]/label")).click();
+//				driver.findElement(By.xpath("//*[@id=\"root\"]/div/main/div[1]/div[2]/div/div/div[6]/div/button")).click();
+//				driver.findElement(By.xpath("//*[@id=\"root\"]/div/header/div[2]/div/div[2]/a")).click();
+//				
+				//delivery 
+//				driver.findElement(By.id("one")).click();
+//				driver.findElement(By.xpath("//*[@id=\"variantListings\"]/div/div/div/div[2]/div/div[2]/input")).sendKeys("111 North Main St");
+//				driver.findElement(By.xpath("//*[@id=\"variantListings\"]/div/div/div/div[2]/div/div[3]/input")).sendKeys("Edinborough Dr");
+//				driver.findElement(By.xpath("//*[@id=\"locality\"]")).sendKeys("Euless");
+//				driver.findElement(By.xpath("//*[@id=\"variantListings\"]/div/div/div/div[2]/div/div[4]/div[2]/div/select")).sendKeys("Texas");
+//				driver.findElement(By.xpath("//*[@id=\"variantListings\"]/div/div/div/div[2]/div/div[4]/div[3]/input")).sendKeys("76039");
+//				driver.findElement(By.id("save-button")).click();
+				
+				//driver.findElement(By.xpath("//label[contains(@for, 'credit-card')]")).click();
+				
+				//driver.findElement(By.id("credit-card")).click();
+				
+//				driver.findElement(By.cssSelector("#credit-card")).click();
+//				
+//				driver.findElement(By.xpath("//label[contains(@for, 'credit-card')]")).click();
+//
+//				WebElement card = driver.findElement(By.cssSelector("iframe[title=\"Secure card payment input frame\"]"));
+//				driver.switchTo().frame(card);
+//
+//				driver.findElement(By.xpath("//*[@id=\"root\"]/form/div/div[2]/span[1]/span[2]/div/div[2]/span/input")).sendKeys("4242 4242 4242 4242");
+//				
+//				driver.findElement(By.xpath("//*[@id=\"root\"]/form/div/div[2]/span[2]/span/span/input")).sendKeys("01/24");
+//				driver.findElement(By.xpath("//*[@id=\"root\"]/form/div/div[2]/span[3]/span/span/input")).sendKeys("111");
+//				driver.findElement(By.xpath("//*[@id=\"root\"]/form/div/div[2]/span[4]/span/span/input")).sendKeys("76039");
+//				driver.switchTo().parentFrame();
+//				driver.findElement(By.xpath("//*[@id=\"stripe-button\"]")).click();
+//				
+				// add coupon
+				
+//				Thread.sleep(4000);
+//				driver.findElement(By.cssSelector("._right-column ._pill-button")).click();
+//				driver.findElement(By.xpath("//*[@id=\"variantListings\"]/div/div/div/div[2]/div[2]/input")).sendKeys("1TIMEONLY");
+//				driver.findElement(By.xpath("//*[@id=\"save-button\"]")).click();
+//				
+//				
+//				// payment
+//				
+//				
+//				driver.findElement(By.xpath("//*[@id=\"webstore-cart-wrapper\"]/div[3]/div[2]/section/div[2]/div/div[2]/div/button")).click();
+//				
+//				// close
+//				Thread.sleep(4000);
+//				driver.findElement(By.linkText("Close & Continue Shopping")).click();
+//				
+				// logout
+				
+				driver.findElement(By.cssSelector("#vue-app-account > div > div.tw-mb-12 > section > div > div.flex-container > div.main > div.main-sub.red > span")).click();
+				driver.quit();
+	}
+	
+
+}
